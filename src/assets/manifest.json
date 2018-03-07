@@ -1,0 +1,10 @@
+{
+    "name": "At Hand",
+    "description" : "Helps with things you need to do, things you want to do and things you believe you can do.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "incognito": "split",
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+}

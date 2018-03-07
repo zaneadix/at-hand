@@ -1,0 +1,21 @@
+{
+  "name": "at-hand",
+  "version": "1.0.0",
+  "description": "Tasks. At hand.",
+  "main": "index.js",
+  "author": "Zane Adickes <zaneadix@gmail.com> (https://github.com/zaneadix)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "4.5.0",
+    "vue": "2.5.13",
+    "vue-loader": "14.1.1",
+    "vue-template-compiler": "2.5.13",
+    "vuex": "3.0.1",
+    "webpack": "4",
+    "webpack-cli": "2.0.10"
+  }
+}
