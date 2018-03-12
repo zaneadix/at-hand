@@ -1,10 +1,10 @@
 <template>
 
-    <ul>
-        <Task />
-        <Task />
-        <Task />
-        <Task />
+    <ul class="task-list">
+        <li class="task-item" v-for="task in tasks">
+            <Task :model="task"
+                  :key="task.name" />
+        </li>
     </ul>
 
 </template>
@@ -23,7 +23,7 @@
         },
         computed: {
             ...mapState({
-                butt: state => state.butt
+                tasks: state => state.tasks
             })
         }
     }
@@ -31,8 +31,20 @@
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
 
+    ul.task-list {
 
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 75%;
+        max-width: 600px;
+        font-size: 1.5rem;
+
+        li {
+            text-align: left;
+        }
+    }
 
 </style>

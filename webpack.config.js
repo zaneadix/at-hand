@@ -10,6 +10,12 @@ module.exports = {
                 use: {
                     loader: "vue-loader"
                 }
+            },
+            {
+                test: /\.s[a|c]ss$/,
+                use: {
+                    loader: 'style!css!sass'
+                }
             }
         ]
     },

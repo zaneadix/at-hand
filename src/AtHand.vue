@@ -1,8 +1,12 @@
 
 <template>
 
-<div id="ham">
-    <List />
+    <div id="app">
+        <div class="list-container">
+            <List />
+        </div>
+    </div>
+    
 </div>
     
 </template>
@@ -23,7 +27,11 @@
 </script>
 
 
-<style>
+<style lang="scss">
+
+    body {
+        margin: 0;
+    }
 
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -31,7 +39,18 @@
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
+        display: flex;
+        position: relative;
+        height: 100vh;
+
+        .list-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
     }
 
 </style>
