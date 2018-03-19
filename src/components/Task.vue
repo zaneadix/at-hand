@@ -2,7 +2,7 @@
 <template>
     
     <div class="task" :class="model.status">
-        <span class="name">{{ model.name }}</span>
+        <span class="name">{{ model.name }} {{model.id}}</span>
         <button class="close" v-on:click="removeTask(model.id)">X</button>
     </div>
     
@@ -26,12 +26,19 @@
 
 <style lang="scss" scoped>
 
+    @import '../styles/vars';
+
     .task {
         padding: .5rem;
-        // box-sizing: border-box;
-        // border-left: 3px solid transparent;
         margin-bottom: 5px;
+        border-bottom: 1px solid $light-grey;
+        font-size: 1.1rem;
         display: flex;
+        font-weight: 100;
+
+        button {
+            border: 0px;
+        }
 
         // box-shadow: 0px -1px 10px rgba(0,0,0,.1); 
 

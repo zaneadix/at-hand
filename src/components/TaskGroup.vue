@@ -1,6 +1,6 @@
 <template>
 
-    <ul class="task-list">
+    <ul class="task-group">
         <li class="task-item" v-for="task in tasks">
             <Task :model="task"
                   :key="task.name" />
@@ -16,15 +16,10 @@
     import Task from './Task.vue';
 
     export default {
-        name: 'List',
+        name: 'TaskGroup',
         components: { Task },
         props: {
-            msg: String
-        },
-        computed: {
-            ...mapState({
-                tasks: state => state.tasks
-            })
+            tasks: Array
         }
     }
 
@@ -33,14 +28,14 @@
 
 <style lang="scss" scoped>
 
-    ul.task-list {
+    @import '../styles/vars';
+
+    ul.task-group {
 
         list-style: none;
         margin: 0;
         padding: 0;
-        width: 75%;
-        max-width: 600px;
-        font-size: 1.5rem;
+        min-height: 60vh;
 
         li {
             text-align: left;

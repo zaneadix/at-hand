@@ -18,28 +18,33 @@ const mutations = {
 
 const store = new Vuex.Store({
     state: {
-        tasks: [
-            Object.assign(new Task(), {
-                id: 1,
-                name: 'Flick a boog',
-                status: 'no-rush'
-            }),
-            Object.assign(new Task(), {
-                id: 1,
-                name: 'Kiss a turtle',
-                status: 'soon'
-            }),
-            Object.assign(new Task(), {
-                id: 1,
-                name: 'Light a candle',
-                status: 'very-soon'
-            }),
-            Object.assign(new Task(), {
-                id: 1,
-                name: 'Go to outer space',
-                status: 'no-rush'
-            })
-        ]
+        activeGroupId: 1,
+        taskGroups: [{
+            name: 'Tasks At Hand',
+            id: 1,
+            tasks: [
+                Object.assign(new Task(), {
+                    id: 1,
+                    name: 'Flick a boog',
+                    status: 'no-rush'
+                }),
+                Object.assign(new Task(), {
+                    id: 2,
+                    name: 'Kiss a turtle',
+                    status: 'soon'
+                }),
+                Object.assign(new Task(), {
+                    id: 3,
+                    name: 'Light a candle',
+                    status: 'very-soon'
+                }),
+                Object.assign(new Task(), {
+                    id: 4,
+                    name: 'Go to outer space',
+                    status: 'no-rush'
+                })
+            ]
+        }]
     },
     actions,
     mutations
